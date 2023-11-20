@@ -7,14 +7,14 @@
 body {
     height: 100vh;
     width: 100%;
-    background-color: #2d1115;
+    background-color: #110708;
 }
 /* navbar */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 15vh;
+    height: 12vh;
     background-color: #fff0f5;
 }
 .logo {
@@ -38,7 +38,7 @@ button {
     border-radius: 5px;
 }
 main {
-    height: 78vh;
+    height: 81vh;
 }
 /* main */
 .box-main {
