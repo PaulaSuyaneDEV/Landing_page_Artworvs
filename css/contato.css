@@ -133,3 +133,22 @@ a {
 a:hover {
     color: black;
 }
+
+@media screen and (max-width: 700px){
+    .sub-box {
+        width: 300px;
+    }
+    .sub-box h1 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+    input , textarea {
+        width: 250px;
+    }
+    input[type='submit']{
+        font-size: 16px;
+    }
+}
