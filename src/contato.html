@@ -6,6 +6,8 @@
     <title>Artworvs</title>
     <link rel="shortcut icon" href="../midia/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/contato.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -21,19 +23,58 @@
                 <form action="">
                     <label for="">Nome:
                     </label>
-                    <input type="text" placeholder="Digite seu nome">
+                    <input type="text" id="nome" placeholder="Digite seu nome:" maxlength="30" autocomplete="off">
                     <label for="">Email:
                     </label>
-                    <input type="email" placeholder="Digite seu email:">
-                    <label for="">Mensagem</label>
-                    <textarea name="" id="messagebox" cols="30" rows="10" placeholder="Digite uma mensagem"></textarea>
-                    <input type="submit">
+                    <input type="email" id="email"  placeholder="Digite seu e-mail:" maxlength="50" autocomplete="off">
+                    <label for="">Assunto: <span>(Ex: venda ou compra)</span>
+                    </label>
+                    <input type="text" id="assunto" placeholder="Digite o assunto:" maxlength="100" autocomplete="off">
+                    <label for="">Mensagem:</label>
+                    <textarea id="mensagem" placeholder="Digite sua mensagem:" maxlength="150" autocomplete="off"></textarea>
                 </form>
+                <button type="submit" onclick="ValidacaoCampos()">Enviar</button>
             </div>
         </div>
     </main>
     <footer>
         <p>Feito por <a href="https://www.instagram.com/dev_fuold/">Paula_Dev</a> @ Todos os direitos reservados</p>
     </footer>
+    <script>
+    function ValidacaoCampos(){
+
+        const  nome1 = document.getElementById("nome")
+         const  email1 = document.getElementById("email")
+         const assunto1 = document.getElementById("assunto")
+         const mensagem1 = document.getElementById("mensagem")
+
+         if(nome1.value == '' && email1.value == '' && assunto1.value == '' && mensagem1.value == ''){
+              alert("Por favor preencha os dados corretamente")
+         }
+         else if (nome1.value == '' || email1.value == '' || assunto1.value == '' || mensagem1.value == ''){
+              alert("Por favor preencha os dados corretamente")
+         }else {
+            (function(){
+          emailjs.init("SFQjlH8d3pRLKRi7P");
+        })();
+
+        var campos = {
+            Nome: document.querySelector("#nome").value,
+            Email: document.querySelector("#email").value,
+            Assunto: document.querySelector("#assunto").value,
+            Mensagem: document.querySelector("#mensagem").value,
+        };
+
+        var serviçoId = "service_1ejn8bj";
+        var modeloId = "template_8l3og6l";
+
+        emailjs.send(serviçoId, modeloId , campos)
+        .then( res => {
+            alert("Email enviado com sucesso!")
+        })
+        .catch();
+         }
+    }
+    </script>
 </body>
 </html>
