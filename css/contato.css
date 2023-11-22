@@ -164,4 +164,7 @@ a:hover {
     input[type='submit']{
         font-size: 16px;
     }
+    .sub-box {
+        height: 450px;
+    } 
 }
