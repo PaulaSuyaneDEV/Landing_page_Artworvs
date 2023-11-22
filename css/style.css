@@ -34,7 +34,7 @@ button {
     margin-right: 30px;
     background-color: #934683;
     border-style: none;
-    color: #2d1115;
+    color: #fff0f5;
     border-radius: 5px;
     font-weight: 700;
 }
@@ -79,6 +79,7 @@ main {
     width: 550px;
     margin-top: 50px;
     margin-left: 70px;
+    border-radius: 5px;
     
 
 }
