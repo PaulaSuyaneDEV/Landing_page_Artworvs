@@ -7,7 +7,7 @@
 body {
     height: 100vh;
     width: 100%;
-    background-color: #934683;
+    background-color: #1f2041;
     
 }
 /* navbar */
@@ -16,7 +16,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 12vh;
-    background-color: #fff0f5;
+    background-color: lightblue;
 }
 .logo {
     display: flex;
@@ -25,9 +25,9 @@ header {
     gap: 5px;
 }
 .logo img {
-    padding: 10px;
     height: 180px;
-    width:250px;
+    width: 200px;
+    padding: 20px;
 }
 button {
     font-size: 20px;
@@ -86,7 +86,7 @@ input {
    width: 350px;
    height: 30px;
    margin: auto;
-   background-color: #934683;
+   background-color: lightblue;
    border-style: none;
    border-radius: 5px;
 
@@ -99,7 +99,7 @@ input::placeholder {
     padding: 0 10px;
 }
 textarea {
-    background-color: #934683;
+    background-color: lightblue;
     height: 60px;
     display: block;
     margin: auto;
@@ -119,17 +119,18 @@ textarea::placeholder {
 }
 button{
     width: 100px;
-    color: #2d1115;
+    color: #1f2041;
     display: block;
     margin: 0 auto;
     font-size: 14px;
     font-weight: 700;
-    border: 2px solid #2d1115;
+    background-color: #1f2041;
+    color: #fff0f5;
 }
 
 /* footer */
 footer {
-    background-color: #fff0f5;
+    background-color: lightblue;
     text-align: center;
     height: 7vh;
     display: flex;
